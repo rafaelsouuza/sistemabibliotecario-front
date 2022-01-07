@@ -4,6 +4,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
+import { UsuarioCreateComponent } from './components/usuario/usuario-create/usuario-create.component';
 import { UsuarioListComponent } from './components/usuario/usuario-list/usuario-list.component';
 
 const routes: Routes = [
@@ -11,7 +12,9 @@ const routes: Routes = [
   {
     path: '', component: NavComponent, canActivate: [AuthGuard], children: [
       { path: 'home', component: HomeComponent },
-      { path: 'usuarios', component: UsuarioListComponent }
+
+      { path: 'usuarios', component: UsuarioListComponent },
+      { path: 'usuarios/create', component: UsuarioCreateComponent }
     ]
   }
 ];
