@@ -36,6 +36,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { UsuarioCreateComponent } from './components/usuario/usuario-create/usuario-create.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 
 @NgModule({
@@ -76,7 +77,8 @@ import { UsuarioCreateComponent } from './components/usuario/usuario-create/usua
        timeOut: 4000,
        closeButton: true,
        progressBar: true
-     })
+     }),
+     NgxMaskModule.forRoot()
   ],
   providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent]
