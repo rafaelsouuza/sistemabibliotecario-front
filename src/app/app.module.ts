@@ -37,6 +37,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { UsuarioCreateComponent } from './components/usuario/usuario-create/usuario-create.component';
 import { NgxMaskModule } from 'ngx-mask';
+import { UsuarioUpdateComponent } from './components/usuario/usuario-update/usuario-update.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { NgxMaskModule } from 'ngx-mask';
     HeaderComponent,
     UsuarioListComponent,
     LoginComponent,
-    UsuarioCreateComponent
+    UsuarioCreateComponent,
+    UsuarioUpdateComponent
   ],
   imports: [
     BrowserModule,

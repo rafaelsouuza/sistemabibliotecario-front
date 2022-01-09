@@ -6,6 +6,7 @@ import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
 import { UsuarioCreateComponent } from './components/usuario/usuario-create/usuario-create.component';
 import { UsuarioListComponent } from './components/usuario/usuario-list/usuario-list.component';
+import { UsuarioUpdateComponent } from './components/usuario/usuario-update/usuario-update.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -14,7 +15,8 @@ const routes: Routes = [
       { path: 'home', component: HomeComponent },
 
       { path: 'usuarios', component: UsuarioListComponent },
-      { path: 'usuarios/create', component: UsuarioCreateComponent }
+      { path: 'usuarios/create', component: UsuarioCreateComponent },
+      { path: 'usuarios/update/:id', component: UsuarioUpdateComponent }
     ]
   }
 ];
