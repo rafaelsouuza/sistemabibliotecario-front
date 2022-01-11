@@ -38,6 +38,7 @@ import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { UsuarioCreateComponent } from './components/usuario/usuario-create/usuario-create.component';
 import { NgxMaskModule } from 'ngx-mask';
 import { UsuarioUpdateComponent } from './components/usuario/usuario-update/usuario-update.component';
+import { UsuarioDeleteComponent } from './components/usuario/usuario-delete/usuario-delete.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { UsuarioUpdateComponent } from './components/usuario/usuario-update/usua
     UsuarioListComponent,
     LoginComponent,
     UsuarioCreateComponent,
-    UsuarioUpdateComponent
+    UsuarioUpdateComponent,
+    UsuarioDeleteComponent
   ],
   imports: [
     BrowserModule,
