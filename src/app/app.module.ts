@@ -39,6 +39,10 @@ import { UsuarioCreateComponent } from './components/usuario/usuario-create/usua
 import { NgxMaskModule } from 'ngx-mask';
 import { UsuarioUpdateComponent } from './components/usuario/usuario-update/usuario-update.component';
 import { UsuarioDeleteComponent } from './components/usuario/usuario-delete/usuario-delete.component';
+import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
+import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
+import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
+import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
 
 
 @NgModule({
@@ -51,7 +55,11 @@ import { UsuarioDeleteComponent } from './components/usuario/usuario-delete/usua
     LoginComponent,
     UsuarioCreateComponent,
     UsuarioUpdateComponent,
-    UsuarioDeleteComponent
+    UsuarioDeleteComponent,
+    ClienteListComponent,
+    ClienteCreateComponent,
+    ClienteUpdateComponent,
+    ClienteDeleteComponent
   ],
   imports: [
     BrowserModule,
