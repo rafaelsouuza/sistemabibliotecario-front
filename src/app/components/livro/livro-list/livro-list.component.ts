@@ -1,25 +1,25 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { Cliente } from 'src/app/models/cliente';
-import { ClienteService } from 'src/app/services/cliente.service';
+import { Livro } from 'src/app/models/livro';
+import { LivroService } from 'src/app/services/livro.service';
 
 @Component({
-  selector: 'app-cliente-list',
-  templateUrl: './cliente-list.component.html',
-  styleUrls: ['./cliente-list.component.css']
+  selector: 'app-livro-list',
+  templateUrl: './livro-list.component.html',
+  styleUrls: ['./livro-list.component.css']
 })
-export class ClienteListComponent implements OnInit {
+export class LivroListComponent implements OnInit {
 
-  ELEMENT_DATA: Cliente[] = []
+  ELEMENT_DATA: Livro[] = []
 
-  displayedColumns: string[] = ['id', 'nome', 'cpf', 'email', 'telefone', 'endereco', 'cidade', 'acoes'];
-  dataSource = new MatTableDataSource<Cliente>(this.ELEMENT_DATA);
+  displayedColumns: string[] = ['id', 'titulo', 'autor', 'editora', 'assunto', 'anoLancamento', 'acoes'];
+  dataSource = new MatTableDataSource<Livro>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(
-    private service: ClienteService 
+    private service: LivroService 
   ) { }
 
   ngOnInit(): void {
@@ -29,7 +29,7 @@ export class ClienteListComponent implements OnInit {
   findall() {
     this.service.findall().subscribe(resposta => {
       this.ELEMENT_DATA = resposta
-      this.dataSource = new MatTableDataSource<Cliente>(resposta);
+      this.dataSource = new MatTableDataSource<Livro>(resposta);
       this.dataSource.paginator = this.paginator;
     })
   }

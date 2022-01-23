@@ -6,6 +6,10 @@ import { ClienteDeleteComponent } from './components/cliente/cliente-delete/clie
 import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { HomeComponent } from './components/home/home.component';
+import { LivroCreateComponent } from './components/livro/livro-create/livro-create.component';
+import { LivroDeleteComponent } from './components/livro/livro-delete/livro-delete.component';
+import { LivroListComponent } from './components/livro/livro-list/livro-list.component';
+import { LivroUpdateComponent } from './components/livro/livro-update/livro-update.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
 import { UsuarioCreateComponent } from './components/usuario/usuario-create/usuario-create.component';
@@ -27,7 +31,12 @@ const routes: Routes = [
       { path: 'clientes', component: ClienteListComponent },
       { path: 'clientes/create', component: ClienteCreateComponent },
       { path: 'clientes/update/:id', component: ClienteUpdateComponent },
-      { path: 'clientes/delete/:id', component: ClienteDeleteComponent }
+      { path: 'clientes/delete/:id', component: ClienteDeleteComponent },
+
+      { path: 'livros', component: LivroListComponent },
+      { path: 'livros/create', component: LivroCreateComponent },
+      { path: 'livros/update/:id', component: LivroUpdateComponent },
+      { path: 'livros/delete/:id', component: LivroDeleteComponent }
 
     ]
   }

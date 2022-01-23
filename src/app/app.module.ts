@@ -26,6 +26,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 // Componentes do projeto
 import { NavComponent } from './components/nav/nav.component';
@@ -43,6 +45,10 @@ import { ClienteListComponent } from './components/cliente/cliente-list/cliente-
 import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
+import { LivroListComponent } from './components/livro/livro-list/livro-list.component';
+import { LivroCreateComponent } from './components/livro/livro-create/livro-create.component';
+import { LivroUpdateComponent } from './components/livro/livro-update/livro-update.component';
+import { LivroDeleteComponent } from './components/livro/livro-delete/livro-delete.component';
 
 
 @NgModule({
@@ -59,7 +65,11 @@ import { ClienteDeleteComponent } from './components/cliente/cliente-delete/clie
     ClienteListComponent,
     ClienteCreateComponent,
     ClienteUpdateComponent,
-    ClienteDeleteComponent
+    ClienteDeleteComponent,
+    LivroListComponent,
+    LivroCreateComponent,
+    LivroUpdateComponent,
+    LivroDeleteComponent
   ],
   imports: [
     BrowserModule,
@@ -85,6 +95,8 @@ import { ClienteDeleteComponent } from './components/cliente/cliente-delete/clie
      MatIconModule,
      MatListModule,
      MatCardModule,
+     MatDatepickerModule,
+     MatNativeDateModule,
      ToastrModule.forRoot({
        timeOut: 4000,
        closeButton: true,
