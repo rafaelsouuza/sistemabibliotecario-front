@@ -5,6 +5,7 @@ import { ClienteCreateComponent } from './components/cliente/cliente-create/clie
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
 import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
+import { EmprestimoListComponent } from './components/emprestimo/emprestimo-list/emprestimo-list.component';
 import { HomeComponent } from './components/home/home.component';
 import { LivroCreateComponent } from './components/livro/livro-create/livro-create.component';
 import { LivroDeleteComponent } from './components/livro/livro-delete/livro-delete.component';
@@ -36,7 +37,9 @@ const routes: Routes = [
       { path: 'livros', component: LivroListComponent },
       { path: 'livros/create', component: LivroCreateComponent },
       { path: 'livros/update/:id', component: LivroUpdateComponent },
-      { path: 'livros/delete/:id', component: LivroDeleteComponent }
+      { path: 'livros/delete/:id', component: LivroDeleteComponent },
+
+      { path: 'emprestimos', component: EmprestimoListComponent },
 
     ]
   }
