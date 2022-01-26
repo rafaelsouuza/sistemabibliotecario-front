@@ -15,6 +15,10 @@ export class EmprestimoService {
     return this.http.get<Emprestimo[]>(`${API_CONFIG.baseUrl}/emprestimos`);
   }
 
+  create(emprestimo: Emprestimo): Observable<Emprestimo> {
+    return this.http.post<Emprestimo>(`${API_CONFIG.baseUrl}/emprestimos`, emprestimo);
+  }
+
 }
 
 
