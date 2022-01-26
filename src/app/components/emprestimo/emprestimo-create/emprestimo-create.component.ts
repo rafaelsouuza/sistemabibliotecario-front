@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-emprestimo-create',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmprestimoCreateComponent implements OnInit {
 
+  status: FormControl = new FormControl(null, [Validators.required]);
+  cliente: FormControl = new FormControl(null, [Validators.required]);
+  livro: FormControl = new FormControl(null, [Validators.required]);
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  validarCampos(): boolean {
+    return this.status.valid && this.cliente.valid && this.livro.valid
   }
 
 }
