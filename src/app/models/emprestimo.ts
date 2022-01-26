@@ -1,6 +1,5 @@
 export interface Emprestimo {
     id?: any;
-    qtd: string;
     dataEmprestimo?: string;
     dataDevolucao?: string;
     status: string;

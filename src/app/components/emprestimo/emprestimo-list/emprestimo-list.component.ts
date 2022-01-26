@@ -14,7 +14,7 @@ export class EmprestimoListComponent implements OnInit {
   ELEMENT_DATA: Emprestimo[] = []
   FILTERED_DATA: Emprestimo[] = []
 
-  displayedColumns: string[] = ['id', 'qtd', 'cliente', 'livro', 'dataEmprestimo', 'dataDevolucao', 'status', 'acoes'];
+  displayedColumns: string[] = ['id', 'cliente', 'livro', 'dataEmprestimo', 'dataDevolucao', 'status', 'acoes'];
   dataSource = new MatTableDataSource<Emprestimo>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
