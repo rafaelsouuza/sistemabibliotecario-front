@@ -51,6 +51,8 @@ import { LivroUpdateComponent } from './components/livro/livro-update/livro-upda
 import { LivroDeleteComponent } from './components/livro/livro-delete/livro-delete.component';
 import { EmprestimoListComponent } from './components/emprestimo/emprestimo-list/emprestimo-list.component';
 import { EmprestimoCreateComponent } from './components/emprestimo/emprestimo-create/emprestimo-create.component';
+import { EmprestimoUpdateComponent } from './components/emprestimo/emprestimo-update/emprestimo-update.component';
+
 
 
 @NgModule({
@@ -73,7 +75,8 @@ import { EmprestimoCreateComponent } from './components/emprestimo/emprestimo-cr
     LivroUpdateComponent,
     LivroDeleteComponent,
     EmprestimoListComponent,
-    EmprestimoCreateComponent
+    EmprestimoCreateComponent,
+    EmprestimoUpdateComponent,
   ],
   imports: [
     BrowserModule,
