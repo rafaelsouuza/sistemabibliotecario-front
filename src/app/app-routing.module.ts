@@ -7,6 +7,7 @@ import { ClienteListComponent } from './components/cliente/cliente-list/cliente-
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { EmprestimoCreateComponent } from './components/emprestimo/emprestimo-create/emprestimo-create.component';
 import { EmprestimoListComponent } from './components/emprestimo/emprestimo-list/emprestimo-list.component';
+import { EmprestimoUpdateComponent } from './components/emprestimo/emprestimo-update/emprestimo-update.component';
 import { HomeComponent } from './components/home/home.component';
 import { LivroCreateComponent } from './components/livro/livro-create/livro-create.component';
 import { LivroDeleteComponent } from './components/livro/livro-delete/livro-delete.component';
@@ -42,7 +43,7 @@ const routes: Routes = [
 
       { path: 'emprestimos', component: EmprestimoListComponent },
       { path: 'emprestimos/create', component: EmprestimoCreateComponent },
-
+      { path: 'emprestimos/update/:id', component: EmprestimoUpdateComponent },
     ]
   }
 ];
