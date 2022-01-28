@@ -52,6 +52,7 @@ import { LivroDeleteComponent } from './components/livro/livro-delete/livro-dele
 import { EmprestimoListComponent } from './components/emprestimo/emprestimo-list/emprestimo-list.component';
 import { EmprestimoCreateComponent } from './components/emprestimo/emprestimo-create/emprestimo-create.component';
 import { EmprestimoUpdateComponent } from './components/emprestimo/emprestimo-update/emprestimo-update.component';
+import { EmprestimoReadComponent } from './components/emprestimo/emprestimo-read/emprestimo-read.component';
 
 
 
@@ -77,6 +78,7 @@ import { EmprestimoUpdateComponent } from './components/emprestimo/emprestimo-up
     EmprestimoListComponent,
     EmprestimoCreateComponent,
     EmprestimoUpdateComponent,
+    EmprestimoReadComponent,
   ],
   imports: [
     BrowserModule,
