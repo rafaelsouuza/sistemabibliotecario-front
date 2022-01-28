@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Cliente } from 'src/app/models/cliente';
 import { Emprestimo } from 'src/app/models/emprestimo';
@@ -37,16 +37,27 @@ export class EmprestimoUpdateComponent implements OnInit {
     private livroService: LivroService,
     private toastService: ToastrService,
     private router: Router,
+    private route: ActivatedRoute,
   ) { }
 
   ngOnInit(): void {
+    this.emprestimo.id = this.route.snapshot.paramMap.get('id');
+    this.findById();
     this.findAllClientes();
     this.findAllLivros();
   }
 
-  create(): void {
-    this.emprestimoService.create(this.emprestimo).subscribe(resposta => {
-      this.toastService.success('Empréstimo criado com sucesso', 'Novo Empréstimo');
+  findById(): void {
+    this.emprestimoService.findById(this.emprestimo.id).subscribe(resposta => {
+      this.emprestimo = resposta;
+    }, ex => {
+      this.toastService.error(ex.error.error);
+    })
+  }
+
+  update(): void {
+    this.emprestimoService.update(this.emprestimo).subscribe(resposta => {
+      this.toastService.success('Empréstimo atualizado com sucesso', 'Empréstimo Atualizado');
       this.router.navigate(['emprestimos']);
     }, ex => {
       this.toastService.error(ex.error.error);
@@ -68,5 +79,15 @@ export class EmprestimoUpdateComponent implements OnInit {
   validarCampos(): boolean {
     return this.status.valid && this.cliente.valid && this.livro.valid
   }
+
+  retornaStatus(status: any): String {
+    if(status == '0') {
+      return 'EMPRESTADO'
+    } else if(status == '1') {
+      return 'DEVOLVIDO'
+    } else {
+      return 'ATRASADO'
+    }
+   }
 
 }
