@@ -4,7 +4,7 @@
 
     <div class="cliente">
         <mat-form-field class="full-width" appearance="outline">
-            <mat-label>{{ emprestimo.nomeCliente }}</mat-label>
+            <mat-label>CLIENTE ({{ emprestimo.nomeCliente }})</mat-label>
             <mat-select 
             [(ngModel)]="emprestimo.cliente"
             name="cliente"
@@ -17,7 +17,7 @@
 
     <div class="livro">
         <mat-form-field class="full-width" appearance="outline">
-            <mat-label>{{ emprestimo.nomeLivro }}</mat-label>
+            <mat-label>LIVRO ({{ emprestimo.nomeLivro }})</mat-label>
             <mat-select 
             [(ngModel)]="emprestimo.livro"
             name="livro"
@@ -30,7 +30,7 @@
 
     <div class="status">
         <mat-form-field class="full-width" appearance="outline">
-            <mat-label>{{ retornaStatus(emprestimo.status) }}</mat-label>
+            <mat-label>STATUS ({{ retornaStatus(emprestimo.status) }})</mat-label>
             <mat-select 
             [(ngModel)]="emprestimo.status"
             name="status"
