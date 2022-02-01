@@ -16,17 +16,17 @@ export class LivroUpdateComponent implements OnInit {
     id: '',
     titulo: '',
     autor: '',
+    isbn: '',
     editora: '',
     assunto: '',
-    anoLancamento: new Date(),
-    qtd: '',
-    dataCadastro: ''
+    anoLancamento: ''
   }
 
   titulo: FormControl = new FormControl(null, Validators.minLength(5));
   autor: FormControl = new FormControl(null, Validators.minLength(5));
+  isbn: FormControl = new FormControl(null, Validators.required);
   editora: FormControl = new FormControl(null, Validators.minLength(5));
-  qtd: FormControl = new FormControl(null, Validators.minLength(1));
+  anoLancamento: FormControl = new FormControl(null, Validators.maxLength(4));
 
   constructor(
     private service: LivroService,
@@ -47,7 +47,6 @@ export class LivroUpdateComponent implements OnInit {
    }
 
   update(): void {
-    this.formataData();
     this.service.update(this.livro).subscribe( () => {
       this.toast.success('Livro atualizado com sucesso!', 'Atualizado');
       this.router.navigate(['livros'])
@@ -63,18 +62,8 @@ export class LivroUpdateComponent implements OnInit {
   }
 
   validarCampos(): boolean {
-    return this.titulo.valid && this.autor.valid 
-    && this.editora.valid && this.qtd.valid 
-  }
-
-  formataData(): void {
-    let data = new Date(),
-      dia = data.getDate().toString(),
-      diaF = (dia.length == 1) ? '0' + dia : dia,
-      mes = (data.getMonth() + 1).toString(), //+1 pois no getMonth Janeiro começa com zero.
-      mesF = (mes.length == 1) ? '0' + mes : mes,
-      anoF = data.getFullYear();
-    this.livro.anoLancamento = diaF + "/" + mesF + "/" + anoF;
+    return this.titulo.valid && this.autor.valid && this.editora.valid 
+           && this.anoLancamento.valid && this.isbn.valid 
   }
 
 }

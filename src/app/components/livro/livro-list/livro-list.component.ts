@@ -13,7 +13,7 @@ export class LivroListComponent implements OnInit {
 
   ELEMENT_DATA: Livro[] = []
 
-  displayedColumns: string[] = ['id', 'titulo', 'autor', 'editora', 'assunto', 'anoLancamento', 'acoes'];
+  displayedColumns: string[] = ['id', 'titulo', 'autor', 'editora', 'anoLancamento', 'isbn', 'acoes'];
   dataSource = new MatTableDataSource<Livro>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;

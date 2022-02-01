@@ -16,11 +16,10 @@ export class LivroDeleteComponent implements OnInit {
     id: '',
     titulo: '',
     autor: '',
-    editora: '', 
+    isbn: '',
+    editora: '',
     assunto: '',
-    anoLancamento: '',
-    qtd: '',
-    dataCadastro: ''
+    anoLancamento: ''
   }
 
   constructor(

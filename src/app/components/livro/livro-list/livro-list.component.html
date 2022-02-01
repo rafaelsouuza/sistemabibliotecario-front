@@ -26,15 +26,15 @@
             <th mat-header-cell *matHeaderCellDef> Autor </th>
             <td mat-cell *matCellDef="let element"> {{element.autor}} </td>
           </ng-container>
+
+          <ng-container matColumnDef="isbn">
+            <th mat-header-cell *matHeaderCellDef> ISBN </th>
+            <td mat-cell *matCellDef="let element"> {{element.isbn}} </td>
+          </ng-container>
       
           <ng-container matColumnDef="editora">
             <th mat-header-cell *matHeaderCellDef> Editora </th>
             <td mat-cell *matCellDef="let element"> {{element.editora}} </td>
-          </ng-container>
-
-          <ng-container matColumnDef="assunto">
-            <th mat-header-cell *matHeaderCellDef> Assunto </th>
-            <td mat-cell *matCellDef="let element"> {{element.assunto}} </td>
           </ng-container>
 
           <ng-container matColumnDef="anoLancamento">
@@ -42,9 +42,9 @@
             <td mat-cell *matCellDef="let element"> {{element.anoLancamento}} </td>
           </ng-container>
 
-          <ng-container matColumnDef="qtd">
-            <th mat-header-cell *matHeaderCellDef> Quantidade </th>
-            <td mat-cell *matCellDef="let element"> {{element.qtd}} </td>
+          <ng-container matColumnDef="assunto">
+            <th mat-header-cell *matHeaderCellDef> Assunto </th>
+            <td mat-cell *matCellDef="let element"> {{element.assunto}} </td>
           </ng-container>
       
           <ng-container matColumnDef="acoes">

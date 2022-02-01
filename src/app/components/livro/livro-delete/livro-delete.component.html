@@ -26,6 +26,16 @@
         </mat-form-field>
 
         <mat-form-field class="fullWidth" appearance="legacy">
+            <mat-label>ISBN</mat-label>
+            <input 
+            [(ngModel)]="livro.isbn"
+            name="isbn"
+            [disabled]="true"
+            matInput>
+            <mat-icon matSuffix>person_search</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="fullWidth" appearance="legacy">
             <mat-label>Editora</mat-label>
             <input
             [(ngModel)]="livro.editora"
@@ -53,16 +63,6 @@
             [disabled]="true"
             matInput>
             <mat-icon matSuffix>event</mat-icon>
-        </mat-form-field>
-
-        <mat-form-field class="fullWidth" appearance="legacy">
-            <mat-label>Quantidade</mat-label>
-            <input 
-            [(ngModel)]="livro.qtd"
-            name="qtd"
-            [disabled]="true"
-            matInput>
-            <mat-icon matSuffix>format_list_numbered</mat-icon>
         </mat-form-field>
 
         <button (click)="delete()" class="fullWidth mat-elevation-z4" mat-flat-button color="primary">Deletar</button>

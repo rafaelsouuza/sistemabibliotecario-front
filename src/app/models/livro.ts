@@ -2,9 +2,8 @@ export interface Livro {
     id?: any;
     titulo: string;
     autor: string;
+    isbn: string;
     editora: string;
     assunto: string;
-    anoLancamento: any;
-    qtd: string;
-    dataCadastro?: any;
+    anoLancamento: string;
 }
